@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Preset</title>
+
+  <!-- FONT (kalau pakai Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">AM Preset</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="preset.html">Preset</a>
+    </div>
+  </nav>
+
+  <!-- HERO / JUDUL GEDE -->
+  <header class="hero">
+    <h1>Download Preset</h1>
+    <p>Pilih preset favorit kamu</p>
+  </header>
+
+  <!-- SEARCH -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Cari preset...">
+  </div>
+
+  <!-- GRID PRESET -->
+  <div class="grid">
+
+    <div class="card preset-card">
+      <h3>Code 126</h3>
+      <p>jj sedikit brutal</p>
+      <a href="https://alightcreative.com/am/share/u/bV5dCoVAgtROANfHLloSbenKKFz2/p/FChJXnd10s-7dc65a8229fd52e3" class="btn-small">5mb Download</a>
+	  <a href="https://drive.google.com/file/d/1W3ANbs5H_FsV5xDgPCyHw1Q6JBbPS6-e/view?usp=drivesdk" class="btn-small">XML download</a>
+	  <span class="badge">FREE</span>
+    </div>
+
+
+  </div>
+
+  <!-- SCRIPT SEARCH -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".preset-card");
+
+    searchInput.addEventListener("keyup", function () {
+      const value = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(value)
+          ? "block"
+          : "none";
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+
+
+.navbar {
+  background: #020617;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px 30px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #cbd5f5;
+  font-size: 16px;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #2563eb;
+  margin: 20px auto 0;
+  border-radius: 10px;
+}
+
+
+.search-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #38bdf8;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+    ),
+    url("bg.png")
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: white;
+}
+
+/* halaman info */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.desc {
+  max-width: 400px;
+  margin-bottom: 20px;
+  color: #cbd5f5;
+}
+
+/* tombol */
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+/* halaman preset */
+.title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* GRID kayak chunkbase */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card p {
+  color: #cbd5f5;
+}
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* tombol kecil */
+.btn-small {
+  display: inline-block;
+  margin-top: 10px;
+  background: #22c55e;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-small:hover {
+  background: #16a34a;
+}
+
+.badge {
+  background: #22c55e;
+  color: black;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("bg.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+}
+
+.page {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.page.fade-out {
+  opacity: 0;
+}
