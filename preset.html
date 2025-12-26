@@ -2,64 +2,72 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Preset</title>
+  <title>Daftar Preset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FONT (kalau pakai Google Fonts) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <!-- PAKE CSS YANG SAMA -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="page">
+<body>
+
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">AM Preset</div>
-    <div class="menu">
-      <a href="index.html">Home</a>
-      <a href="preset.html">Preset</a>
+ <nav>
+  <div class="logo">@Ultramarine_prst</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="preset.html">Preset</a></li>
+  </ul>
+</nav>
+
+  <!-- KONTEN -->
+  <section style="padding: 60px 20px; max-width: 800px; margin: auto;">
+
+    <h2 style="margin-bottom: 20px;">📂 Daftar Preset</h2>
+
+    <!-- SEARCH (OPSIONAL, AMAN) -->
+    <input
+      type="text"
+      placeholder="Cari preset..."
+      style="
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 30px;
+        outline: none;
+      "
+    >
+
+    <!-- LIST PRESET -->
+    <div class="preset-list">
+
+      <div class="preset-item">
+        <span>📂ultramarine:126</span>
+        <a href="https://alightcreative.com/am/share/u/bV5dCoVAgtROANfHLloSbenKKFz2/p/FChJXnd10s-7dc65a8229fd52e3" class="btn">5mb</a>
+		<a href="https://drive.google.com/file/d/1W3ANbs5H_FsV5xDgPCyHw1Q6JBbPS6-e/view?usp=drivesdk" class="btn">Xml</a>
+      </div>
+
+      <div class="preset-item">
+        <span>📂ultramarine:125</span>
+        <a href="https://alightcreative.com/am/share/u/bV5dCoVAgtROANfHLloSbenKKFz2/p/Zmbv8WST3G-cf580bd1be98c481" class="btn">5mb</a>
+		<a href="https://drive.google.com/file/d/1Xlxq-rndmAuxFqB7pAiJHqR7T_kpxsh6/view?usp=drivesdk" class="btn">Xml</a>
+      </div>
+	  
+	  <div class="preset-item">
+        <span>📂ultramarine:124</span>
+        <a href="https://alightcreative.com/am/share/u/bV5dCoVAgtROANfHLloSbenKKFz2/p/f0FHmF1z9D-c6a61d4147ae9502" class="btn">5mb</a>
+		<a href="https://drive.google.com/file/d/12w0JfIBdeSHqC-vDOBYigxr_nbrX-tJ3/view?usp=drivesdk" class="btn">Xml</a>
+      </div>
+
     </div>
-  </nav>
 
-  <!-- HERO / JUDUL GEDE -->
-  <header class="hero">
-    <h1>Download Preset</h1>
-    <p>Pilih preset favorit kamu</p>
-  </header>
+  </section>
 
-  <!-- SEARCH -->
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Cari preset...">
-  </div>
-
-  <!-- GRID PRESET -->
-  <div class="grid">
-
-    <div class="card preset-card">
-      <h3>Code 126</h3>
-      <p>jj sedikit brutal</p>
-      <a href="https://alightcreative.com/am/share/u/bV5dCoVAgtROANfHLloSbenKKFz2/p/FChJXnd10s-7dc65a8229fd52e3" class="btn-small">5mb Download</a>
-	  <a href="https://drive.google.com/file/d/1W3ANbs5H_FsV5xDgPCyHw1Q6JBbPS6-e/view?usp=drivesdk" class="btn-small">XML download</a>
-	  <span class="badge">FREE</span>
-    </div>
-
-
-  </div>
-
-  <!-- SCRIPT SEARCH -->
-  <script>
-    const searchInput = document.getElementById("searchInput");
-    const cards = document.querySelectorAll(".preset-card");
-
-    searchInput.addEventListener("keyup", function () {
-      const value = searchInput.value.toLowerCase();
-      cards.forEach(card => {
-        card.style.display = card.innerText.toLowerCase().includes(value)
-          ? "block"
-          : "none";
-      });
-    });
-  </script>
+  <!-- FOOTER -->
+  <footer style="text-align:center; padding: 30px; opacity:0.5;">
+    © 2025 Ultramarine
+  </footer>
 
 </body>
 </html>

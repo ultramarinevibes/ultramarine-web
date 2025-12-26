@@ -1,33 +1,270 @@
 <!DOCTYPE html>
 <html lang="id">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <head>
   <meta charset="UTF-8">
-  <title>Preset ultramarine</title>
+  <title>Alight Motion Preset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<nav class="navbar">
-  <div class="logo">@ultramarine</div>
-  <div class="menu">
-    <a href="index.html">Home</a>
-    <a href="preset.html">Preset</a>
-	<header class="hero">
-  <h1>Ultramarine preset </h1>
-  <p>Kumpulan preset gratis terbaru</p>
-</header>
-  </div>
-</nav>
-  <div class="container">
-    <h1>Penjelasan Singkat</h1>
-    <p class="desc">
-      tujuan saya membuat web ini agar pengguna alight motion terutama pengikut setia ultramarine mudah mencari preset terbaru dan membuat preset agar lebih tersusun. jangan lupa follow akun ultramarine di tiktok (@ultramarine_prst)
-    </p>
 
-    <a href="preset.html" class="btn">
-      List preset
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #0f1e3d, #050b1a);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    nav ul li:hover {
+      opacity: 1;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 14px 30px;
+      border: none;
+      border-radius: 8px;
+      background: #00ff7f;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ff7f;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== FEATURES ===== */
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 80px 60px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      width: 260px;
+      border-radius: 12px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(0,255,127,0.2);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      opacity: 0.7;
+      font-size: 14px;
+    }
+
+    /* ===== PREVIEW ===== */
+    .preview {
+      padding: 60px;
+    }
+
+    .preview h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .preview-item {
+      height: 180px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.6;
+    }
+
+    /* ===== STEPS ===== */
+    .steps {
+      padding: 80px 60px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .steps h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .steps ol {
+      max-width: 500px;
+      margin: auto;
+      font-size: 16px;
+      opacity: 0.8;
+      line-height: 2;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.5;
+      font-size: 14px;
+    }
+	
+	body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,255,127,0.15), transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+  </style>
+</head>
+<script>
+  const scrollElements = document.querySelectorAll('.scroll');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  scrollElements.forEach(el => observer.observe(el));
+</script>
+
+<body>
+  <nav>
+  <div class="logo">@Ultramarine_prst</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="preset.html">Preset</a></li>
+  </ul>
+</nav>
+
+  <div class="hero-text">
+  <h1>Alight Motion Preset</h1>
+  <p>Preset by Ultramarine • Clean • Gratis</p>
+
+  <div class="hero-buttons">
+    <a href="preset.html" class="btn main-btn">List Preset</a>
+
+    <a
+      href="https://www.tiktok.com/@ultramarine_prst"
+      target="_blank"
+      class="follow-btn"
+    >
+      Follow TikTok
     </a>
   </div>
+</div>
+
+
+  <section class="features">
+    <div class="card">
+      <h3>⚡ Mudah Dipakai</h3>
+      <p>Tinggal import dan edit sesuai style kamu</p>
+    </div>
+    <div class="card">
+      <h3>🎬 Preset</h3>
+      <p>Preset yang mudah dijangkau semua orang</p>
+    </div>
+    <div class="card">
+      <h3>🆓 Gratis</h3>
+      <p>Semua preset bisa dipakai tanpa biaya</p>
+    </div>
+  </section>
+
+  <section class="steps">
+    <h2>📥 Cara Download</h2>
+    <ol>
+	  <li>Follow TikTok @ultramarine_prst</li>
+      <li>tekan tombol "list preset"</li>
+	  <li>pilih preset yang ingin digunakan</li>
+	  <li>pilih download 5mb atau Xml</li>
+      <li>Download preset & langsung pakai</li>
+    </ol>
+  </section>
+
+  <footer>
+    © 2025 Ultramarine • Made with ❤️
+  </footer>
 
 </body>
 </html>
